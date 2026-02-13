@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  /* Minecraft Palette */
+  --dirt-main: #5c3c21;
+  --dirt-light: #8a5c32;
+  --grass-top: #4a8a30;
+  --grass-side: #3b6e26;
+  --stone: #7d7d7d;
+  --stone-dark: #585858;
+  --diamond: #00e0ff;
+  --gold: #ffd700;
+  --redstone: #ff0000;
+
+  --text: #ffffff;
+  --text-shadow: 2px 2px 0px #000000;
+
+  --bg-color: #1a1a1a;
+  --card-bg: rgba(0, 0, 0, 0.6);
+  --border-light: rgba(255, 255, 255, 0.4);
+  --border-dark: rgba(0, 0, 0, 0.6);
+
+  --font-pixel: 'VT323', monospace;
+  --radius: 0px;
+  /* Blocky look */
+
+  /* Retain variable names used in JS/Components to prevent crashes, mapped to MC colors */
+  --primary: #5c3c21;
+  /* Dirt */
+  --secondary: #7d7d7d;
+  /* Stone */
+  --accent: #ffd700;
+  /* Gold */
+  --text-muted: #aaaaaa;
+}
+
+body {
+  margin: 0;
+  background-color: #2c2c2c;
+  background-image:
+    linear-gradient(45deg, #333 25%, transparent 25%),
+    linear-gradient(-45deg, #333 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #333 75%),
+    linear-gradient(-45deg, transparent 75%, #333 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  color: var(--text);
+  min-height: 100vh;
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-pixel);
+  text-transform: uppercase;
+  text-shadow: var(--text-shadow);
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+.glass-panel {
+  background: rgba(0, 0, 0, 0.6);
+  border: 4px solid #585858;
+  box-shadow:
+    inset 4px 4px 0px rgba(255, 255, 255, 0.1),
+    inset -4px -4px 0px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  image-rendering: pixelated;
+}
+
+.btn {
+  background: #7d7d7d;
+  color: white;
+  border: none;
+  border-top: 4px solid #b8b8b8;
+  border-left: 4px solid #b8b8b8;
+  border-right: 4px solid #3a3a3a;
+  border-bottom: 4px solid #3a3a3a;
+  padding: 10px 20px;
+  font-family: var(--font-pixel);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-shadow: 2px 2px #000;
+  position: relative;
+  border-radius: 0;
+}
+
+.btn:active {
+  border-top: 4px solid #3a3a3a;
+  border-left: 4px solid #3a3a3a;
+  border-right: 4px solid #b8b8b8;
+  border-bottom: 4px solid #b8b8b8;
+  transform: translateY(2px);
+}
+
+.btn:hover {
+  background: #8e8e8e;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  background: #3a3a3a;
+  color: white;
+  border: 4px solid #1a1a1a;
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #585858;
+  border: 2px solid #1a1a1a;
+}
